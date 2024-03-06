@@ -83,7 +83,7 @@ class PostsController extends Controller
         ]);
 
         $image_url = $request->image->store('image', 'public');
-
+        
         Bet::find($id)->update([
             'event'=> $request->event,
             'hidden'=> $request->hidden,
