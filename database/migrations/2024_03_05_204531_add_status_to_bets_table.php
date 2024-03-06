@@ -24,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('bets', function (Blueprint $table) {
             //
-            $table->dropColumn('paid');
+            $table->dropColumn('status');
         });
     }
 };
