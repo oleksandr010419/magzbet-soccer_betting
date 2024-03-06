@@ -88,14 +88,9 @@ class PostsController extends Controller
             'profit'=> 'max:255',
         ]);
 
-<<<<<<< HEAD
-        $image_url = $request->image->store('image', 'public');
-        
-=======
         $imageName = time().'.'.$request->image->extension(); 
         $image_url = $request->image->move('public'."\\uploads\\bets\\".$id, $imageName);
 
->>>>>>> f1f820921fb9aa36783b2022f25233e920d0dfe7
         Bet::find($id)->update([
             'event'=> $request->event,
             'hidden'=> $request->hidden,
